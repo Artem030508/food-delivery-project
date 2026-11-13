@@ -1,0 +1,57 @@
+
+.layout {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) minmax(0, 1000px) minmax(220px, 1fr);
+  gap: 25px;
+}
+
+/* Центральный сайт */
+.main {
+  min-height: 100vh;
+  border-left: 2px solid #29292e;
+  border-right: 2px solid #29292e;
+}
+
+/* Боковые блоки */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+/* Фотографии */
+.sidebar img {
+  display: block;
+  width: 95%;
+  max-width: 300px;
+  height: 450px;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 12px;
+  border: 1px solid #38383d;
+}
+
+/* Планшеты */
+@media (max-width: 950px) {
+  .layout {
+    display: block;
+    padding: 0;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .main {
+    border: none;
+  }
+}

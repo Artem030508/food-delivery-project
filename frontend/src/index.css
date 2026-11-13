@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,11 +6,19 @@
   font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
+html {
+  min-height: 100%;
+  background-color: #121214;
+}
+
 body {
-  
-  background-color: #121214; 
-  color: #333;
-  padding: 40px 20px;
+  min-height: 100vh;
+  width: 100%;
+
+  background-color: #121214;
+  color: #e1e1e6;
+
+  overflow-x: hidden;
 }
 
 button {
@@ -20,4 +29,10 @@ button {
 button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
 }
